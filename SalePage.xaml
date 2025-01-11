@@ -1,0 +1,22 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DealershipAudiMobile.SalePage"
+             Title="Sales">
+    <StackLayout Margin="20">
+        <ListView x:Name="saleListView"
+                  Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Label Text="{Binding TotalPrice}" VerticalOptions="Center" />
+                            <Button Text="Edit" Clicked="OnEditButtonClicked" CommandParameter="{Binding .}" />
+                            <Button Text="Delete" Clicked="OnDeleteButtonClicked" CommandParameter="{Binding .}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Add Sale" Clicked="OnAddSaleClicked" />
+    </StackLayout>
+</ContentPage>

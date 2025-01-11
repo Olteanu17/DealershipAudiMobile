@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DealershipAudiMobile.SaleDetailPage"
+             Title="Sale Details">
+    <StackLayout Padding="10">
+        <Label Text="Customer:" />
+        <Picker x:Name="CustomerPicker" Title="Select Customer" />
+
+        <Label Text="Car:" />
+        <Picker x:Name="CarPicker" Title="Select Car" />
+
+        <Label Text="Sale Date:" />
+        <DatePicker Date="{Binding SaleDate}" />
+
+        <Label Text="Total Price:" />
+        <Entry Text="{Binding TotalPrice}" Placeholder="Enter total price" Keyboard="Numeric" />
+
+        <Button Text="Save"
+                Clicked="OnSaveButtonClicked"
+                HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>
